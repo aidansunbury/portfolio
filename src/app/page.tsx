@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { FileTextIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
@@ -35,6 +35,19 @@ export default function Page() {
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+              <Button
+                className="size-8"
+                variant="outline"
+                size="icon"
+                asChild
+              >
+                <a
+                  href="https://github.com/aidansunbury/resume/releases/latest/download/resume.pdf"
+                  title="Download resume PDF"
+                >
+                  <FileTextIcon className="size-4" />
+                </a>
+              </Button>
               {RESUME_DATA.contact.email ? (
                 <Button
                   className="size-8"
@@ -181,6 +194,29 @@ export default function Page() {
                 />
               );
             })}
+          </div>
+        </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Tech Blogs</h2>
+          <p className="text-pretty font-mono text-sm text-muted-foreground">
+            Engineering writing I keep coming back to:
+          </p>
+          <div className="space-y-3">
+            {RESUME_DATA.blogs.map((blog) => (
+              <div key={blog.url}>
+                <a
+                  className="font-medium hover:underline"
+                  href={blog.url}
+                  target="_blank"
+                >
+                  {blog.title}
+                </a>
+                <p className="text-pretty font-mono text-xs text-muted-foreground">
+                  {blog.note}
+                </p>
+              </div>
+            ))}
           </div>
         </Section>
       </section>

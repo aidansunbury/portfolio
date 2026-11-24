@@ -1,278 +1,200 @@
-import {
-  AmbitLogo,
-  BarepapersLogo,
-  BimLogo,
-  CDGOLogo,
-  ClevertechLogo,
-  ConsultlyLogo,
-  EvercastLogo,
-  Howdy,
-  JarockiMeLogo,
-  JojoMobileLogo,
-  Minimal,
-  MobileVikingsLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
-  TastyCloudLogo,
-  YearProgressLogo,
-} from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { BerkeleyLogo, GivefrontLogo, OwnerLogo } from "@/images/logos";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Aidan Sunbury",
+  initials: "AS",
+  location: "San Francisco, California, PT",
+  locationLink: "https://www.google.com/maps/place/San+Francisco",
   about:
-    "Full Stack Engineer focused on building products with extra attention to detail",
+    "Software engineer building agent platforms and the infrastructure underneath them",
   summary:
-    "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+    "I am a software engineer helping restaurants grow at Owner.com in San Francisco. Most of my work has been on our internal coding agent and other dev-ex pursuits, while also dabbling in our customer-facing Owner agent. Previously, I was a founding engineer at Givefront, where I worked on financial software for nonprofits.",
+  avatarUrl: "https://avatars.githubusercontent.com/u/64103161?v=4",
+  personalWebsiteUrl: "https://aidansunbury.com",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "aidansunbury@gmail.com",
+    tel: "+19254515546",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/aidansunbury",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/aidan-sunbury/",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "UC Berkeley",
+      degree: "B.S. Electrical Engineering & Computer Sciences (EECS)",
+      start: "",
+      end: "",
     },
   ],
   work: [
     {
-      company: "Parabol",
-      link: "https://parabol.co",
-      badges: ["Remote"],
-      title: "Senior Full Stack Developer",
-      logo: ParabolLogo,
-      start: "2021",
-      end: "2024",
-      description:
-        "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
-    },
-    {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
-      description:
-        "Created Android mobile apps and led teams for companies like Vision Media, DKMS, or AAA. Built live streaming application for Evercast from scratch. Technologies: Android, Kotlin, React, TypeScript, GraphQL",
-    },
-    {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
+      company: "Owner.com",
+      link: "https://owner.com",
       badges: [],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
-      description:
-        "Built an Android team, created Android apps for biggest Polish companies like LOT, Polskie Radio, Agora, PolskaPress",
+      title: "Senior Software Engineer (promoted from SWE, Sep 2026)",
+      logo: OwnerLogo,
+      start: "Feb 2026",
+      end: "Present",
+      description: (
+        <>
+          <p>
+            Owner builds the AI agent that runs restaurants&rsquo; online presence.
+            I work on the customer-facing Owner agent and, before that, on
+            Forge — our internal cloud coding agent.{" "}
+            <a
+              className="underline"
+              href="https://building.owner.com/self-improving-agent"
+            >
+              More on the self-improving agent
+            </a>
+            .
+          </p>
+          <p className="mt-2 font-semibold">Owner Agent (customer-facing)</p>
+          <ul className="mt-1 list-inside list-disc space-y-1">
+            <li>
+              Built Support View, an agent-assisted console that gives support
+              reps Owner-agent capabilities grounded in the context of live
+              conversations — cut average handle time 30% across an 80-person
+              support org.
+            </li>
+            <li>
+              Built automatic detection and closure of tool-functionality gaps
+              in the agent — the system finds where its own tools fall short
+              and builds what&rsquo;s missing.
+            </li>
+            <li>
+              Implemented cross-provider failover for the agent harness, with
+              automated chaos testing to continuously verify failover actually
+              works when a provider goes down.
+            </li>
+          </ul>
+          <p className="mt-2 font-semibold">
+            Owner Forge (internal cloud coding agent)
+          </p>
+          <ul className="mt-1 list-inside list-disc space-y-1">
+            <li>
+              Migrated agent sandbox execution from self-hosted Kubernetes to
+              Modal — startup went from minutes to under ten seconds and we
+              saved tens of thousands of dollars per month, all with a
+              zero-downtime cutover.
+            </li>
+            <li>
+              Led the platform&rsquo;s migration from a Claude Code–based runtime to
+              OpenCode, introducing an inference gateway that routes to
+              cheaper models and tracks usage accurately per tenant.
+            </li>
+            <li>
+              Shipped Forge&rsquo;s first web GUI by building on OpenCode&rsquo;s existing
+              web interface — state-of-the-art UX with near-zero maintenance
+              burden instead of a bespoke frontend we&rsquo;d have to maintain.
+            </li>
+            <li>
+              Designed the identities system, decoupling agent automations
+              from individual users&rsquo; spend limits and unlocking org-level
+              automation.
+            </li>
+            <li>
+              Built in-workspace browsers and Android emulators streaming over
+              a display server, letting agents see and interact with real
+              browsers and mobile apps — dramatically better feedback loops
+              than text-only tool output.
+            </li>
+          </ul>
+        </>
+      ),
     },
     {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
+      company: "Givefront",
+      link: "https://givefront.com",
       badges: [],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description: "Creating and testing software for LTE base stations",
+      title: "CTO & Founding Engineer",
+      logo: GivefrontLogo,
+      start: "Feb 2024",
+      end: "Jan 2026",
+      description: (
+        <>
+          <p>
+            Joined as the first engineer and built Givefront Spend, a
+            corporate card and spend management platform for nonprofits, from
+            zero to 100+ organizations.
+          </p>
+          <ul className="mt-1 list-inside list-disc space-y-1">
+            <li>
+              Shipped the core card platform: card issuance, role-based access
+              controls, configurable spend limits, and bill pay.
+            </li>
+            <li>
+              Owned all infrastructure as code: isolated dev/staging/prod
+              environments across separate AWS accounts, an event-driven
+              backend with 25+ subscribers handling the transaction lifecycle,
+              and encryption of sensitive bank account data at rest.
+            </li>
+            <li>
+              Built the accounting integrations (QuickBooks, Xero) and an AI
+              receipt-processing pipeline that extracts and categorizes
+              expenses automatically.
+            </li>
+            <li>
+              The v1 product was an accounting automation tool I built as
+              founding engineer — it secured the initial customers and led to
+              the Spend pivot.
+            </li>
+          </ul>
+        </>
+      ),
     },
   ],
   skills: [
-    "JavaScript",
     "TypeScript",
-    "React/Next.js/Remix",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "WebRTC",
+    "Go",
+    "Python",
+    "React",
+    "AWS",
+    "SST",
+    "Kubernetes",
+    "Modal",
+    "Postgres",
+    "Event-driven systems",
+    "LLM agents",
+    "Infrastructure as code",
   ],
   projects: [
     {
-      title: "Consultly",
-      techStack: [
-        "Side Project",
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-      ],
-      description: "A platform to build and grow your online business",
-      logo: ConsultlyLogo,
+      title: "vibevarium",
+      techStack: ["Side Project", "TypeScript", "Cloudflare", "MCP"],
+      description:
+        "A platform where every vibe-coded app is a self-contained world — its own repo, deploy, domain, and auth, all grown from one control plane",
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "vibevarium.com",
+        href: "https://vibevarium.com",
       },
     },
+  ],
+  blogs: [
     {
-      title: "Monito",
-      techStack: ["Side Project", "TypeScript", "Next.js", "Browser Extension"],
-      description:
-        "Browser extension that records everything happening in a web application",
-      logo: MonitoLogo,
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
+      title: "Why we built our background agent",
+      url: "https://builders.ramp.com/post/why-we-built-our-background-agent",
+      note: "Ramp's engineering blog on taking their coding agent out of the interactive loop and running it in the background — closely related to my work on Forge.",
     },
     {
-      title: "Jarocki.me",
-      techStack: ["Side Project", "Next.js", "MDX"],
-      description:
-        "My personal website and blog. Built with Next.js and Notion API",
-      logo: JarockiMeLogo,
-      link: {
-        label: "github.com",
-        href: "https://jarocki.me/",
-      },
+      title: "Zanzibar",
+      url: "https://authzed.com/zanzibar",
+      note: "AuthZed's writeup of Google's authorization model — the design space behind Forge identities and decoupling automations from user spend limits.",
     },
     {
-      title: "Minimal",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Minimalist calendars, habit trackers and planners generator",
-      logo: Minimal,
-      link: {
-        label: "useminimal.com",
-        href: "https://useminimal.com/",
-      },
-    },
-    {
-      title: "Barepapers",
-      techStack: ["Side Project", "Next.js", "Puppeteer"],
-      description:
-        "Generates beautiful wallpapers using random shapes and gradients",
-      logo: BarepapersLogo,
-      link: {
-        label: "barepapers.com",
-        href: "https://barepapers.com/",
-      },
-    },
-    {
-      title: "Year progress",
-      techStack: ["Side Project", "TypeScript", "Next.js"],
-      description: "Tracks current year progress and displays a countdown",
-      logo: YearProgressLogo,
-      link: {
-        label: "getyearprogress.com",
-        href: "https://getyearprogress.com/",
-      },
-    },
-    {
-      title: "Parabol",
-      techStack: [
-        "Full Stack Developer",
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
-      ],
-      description:
-        "The Agile meeting co-pilot that delivers better meetings with less effort",
-      logo: ParabolLogo,
-      link: {
-        label: "github.com",
-        href: "https://parabol.co/",
-      },
-    },
-    {
-      title: "Evercast",
-      techStack: [
-        "Lead Frontend Developer",
-
-        "TypeScript",
-        "React",
-        "Node.js",
-        "GraphQL",
-      ],
-      description:
-        "Creative collaboration platform that combines video conferencing and HD media streaming",
-      logo: EvercastLogo,
-      link: {
-        label: "evercast.us",
-        href: "https://www.evercast.us/",
-      },
-    },
-    {
-      title: "Mobile Vikings",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for leading virtual mobile operator in Poland",
-      logo: MobileVikingsLogo,
-      link: {
-        label: "mobilevikings.pl",
-        href: "https://mobilevikings.pl/",
-      },
-    },
-    {
-      title: "Howdy",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Howdy is a place for you to join communities you care about",
-      logo: Howdy,
-      link: {
-        label: "play.google.com",
-        href: "https://howdy.co/",
-      },
-    },
-    {
-      title: "Tastycloud",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application for managing and displaying restaurant menus in kiosk mode",
-      logo: TastyCloudLogo,
-      link: {
-        label: "tastycloud.fr",
-        href: "https://www.tastycloud.fr/",
-      },
-    },
-    {
-      title: "Ambit",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with sharing your contact details",
-      logo: AmbitLogo,
-    },
-    {
-      title: "Bim",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Android application that helps with booking a table in a restaurants",
-      logo: BimLogo,
-    },
-    {
-      title: "Canal Digital GO",
-      techStack: ["Lead Android Developer", "Android", "Kotlin"],
-      description:
-        "Video streaming mobile application for Canal Digital subscribers",
-      logo: CDGOLogo,
+      title: "opencode reloaded",
+      url: "https://anoma.ly/notes/opencode-reloaded/",
+      note: "Notes on the OpenCode agent harness that Forge's runtime is built on.",
     },
   ],
 } as const;
