@@ -9,7 +9,7 @@ export const RESUME_DATA = {
   about:
     "Software engineer building agent platforms and the infrastructure underneath them",
   summary:
-    "I build AI agent systems and the platforms they run on. At Owner.com I work on the customer-facing Owner agent and led the infrastructure of Forge, our internal cloud coding agent — including a zero-downtime migration that cut sandbox startup from minutes to seconds and saves tens of thousands of dollars a month. Before that I was the founding engineer and CTO at Givefront, where I built a corporate card and spend management platform for nonprofits from zero to 100+ organizations. UC Berkeley EECS.",
+    "I am a software engineer helping restaurants grow at Owner.com in San Francisco. Most of my work has been on our internal coding agent and other dev-ex pursuits, while also dabbling in our customer-facing Owner agent. Previously, I was a founding engineer at Givefront, where I worked on financial software for nonprofits.",
   avatarUrl: "https://avatars.githubusercontent.com/u/64103161?v=4",
   personalWebsiteUrl: "https://aidansunbury.com",
   contact: {
@@ -170,33 +170,31 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
-      title: "aidan-shadcn-registry",
-      techStack: ["Side Project", "TypeScript", "shadcn/ui"],
+      title: "vibevarium",
+      techStack: ["Side Project", "TypeScript", "Cloudflare", "MCP"],
       description:
-        "Personal component registry installable via the shadcn CLI",
+        "A platform where every vibe-coded app is a self-contained world — its own repo, deploy, domain, and auth, all grown from one control plane",
       link: {
-        label: "github.com",
-        href: "https://github.com/aidansunbury/aidan-shadcn-registry",
+        label: "vibevarium.com",
+        href: "https://vibevarium.com",
       },
     },
+  ],
+  blogs: [
     {
-      title: "center-a-div",
-      techStack: ["Side Project", "Tailwind"],
-      description:
-        "For when you have to center a div, or make some other layout with Tailwind CSS",
-      link: {
-        label: "github.com",
-        href: "https://github.com/aidansunbury/center-a-div",
-      },
+      title: "Why we built our background agent",
+      url: "https://builders.ramp.com/post/why-we-built-our-background-agent",
+      note: "Ramp's engineering blog on taking their coding agent out of the interactive loop and running it in the background — closely related to my work on Forge.",
     },
     {
-      title: "docs-agent",
-      techStack: ["Side Project", "AI"],
-      description: "Agent for searching codebases and their docs",
-      link: {
-        label: "github.com",
-        href: "https://github.com/aidansunbury/docs-agent",
-      },
+      title: "Zanzibar",
+      url: "https://authzed.com/zanzibar",
+      note: "AuthZed's writeup of Google's authorization model — the design space behind Forge identities and decoupling automations from user spend limits.",
+    },
+    {
+      title: "opencode reloaded",
+      url: "https://anoma.ly/notes/opencode-reloaded/",
+      note: "Notes on the OpenCode agent harness that Forge's runtime is built on.",
     },
   ],
 } as const;

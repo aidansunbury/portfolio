@@ -196,6 +196,29 @@ export default function Page() {
             })}
           </div>
         </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Tech Blogs</h2>
+          <p className="text-pretty font-mono text-sm text-muted-foreground">
+            Engineering writing I keep coming back to:
+          </p>
+          <div className="space-y-3">
+            {RESUME_DATA.blogs.map((blog) => (
+              <div key={blog.url}>
+                <a
+                  className="font-medium hover:underline"
+                  href={blog.url}
+                  target="_blank"
+                >
+                  {blog.title}
+                </a>
+                <p className="text-pretty font-mono text-xs text-muted-foreground">
+                  {blog.note}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Section>
       </section>
 
       <CommandMenu
